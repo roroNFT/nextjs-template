@@ -10,7 +10,7 @@ const handler = NextAuth({
         password: { label: "Mot de passe", type: "password" }
       },
       async authorize(credentials) {
-        if (credentials?.email === "admin@teste.fr" && credentials?.password === "teste.fr") {
+        if (credentials?.email === "admin@test.fr" && credentials?.password === "test.fr") {
           return { id: "1", name: "Admin Certificat", email: credentials.email, role: "admin" };
         }
         return null;
